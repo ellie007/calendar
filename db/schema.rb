@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20130822194529) do
 
   create_table "users", force: true do |t|
@@ -20,6 +21,27 @@ ActiveRecord::Schema.define(version: 20130822194529) do
     t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
+=======
+ActiveRecord::Schema.define(version: 20130822194002) do
+
+  create_table "events", force: true do |t|
+    t.datetime "start_on"
+    t.datetime "ends_on"
+    t.integer  "host_id"
+    t.string   "location"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "invites", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.boolean  "attending"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+>>>>>>> srallen-events
   end
 
 end
